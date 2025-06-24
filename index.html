@@ -304,7 +304,7 @@
             <p class="newsletter-description">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           </div>
           <div class="newsletter-form-wrapper">
-            <form class="newsletter-form">
+            <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="newsletter-email" class="visually-hidden">Ваш Email</label>
               <input class="newsletter-email" type="email" name="email" id="newsletter-email" placeholder="Ваш e-mail">
 
@@ -425,6 +425,9 @@
 
     <section class="modal-delivery">
       <h2 class="delivery-title">Доставка под заказ</h2>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
       <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="modal-delivery-wrapper">
           <div class="input-wrapper">
@@ -436,7 +439,7 @@
           <div class="input-wrapper">
             <label for="delivery-email">Ваш e-mail:</label>
             <input class="delivery-email" id="delivery-email" type="email" name="email" placeholder="Введите e-mail">
-            <span class="email-error">Забавный у вас адрес</span>
+            <span class="input-help input-help-error">Забавный у вас адрес</span>
           </div>
         </div>
 
@@ -447,13 +450,13 @@
           </div>
 
           <div class="input-wrapper">
-            <div class="quantity-wrapper">
+            <div class="quantity-wrapper quantity-label">
               <label for="quantity">Количество:</label>
               <button class="tooltip-button">
                 <span class="visually-hidden">Дополнительная информация про возможное количество</span>
                 i
               </button>
-              <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+              <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям <br>
             к провозу багажа.</p>
             </div>
             <div class="quantity-wrapper">
@@ -461,7 +464,7 @@
                 -
                 <span class="visually-hidden">Уменьшить количество</span>
              </button>
-              <input class="delivery-quantity" id="quantity" type="text" name="order" value="1">
+              <input class="delivery-quantity" id="quantity" type="number" name="order" value="1">
               <button type="button" class="quantity-button quantity-increase">
                 +
                 <span class="visually-hidden">Увеличить количество</span>
